@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Password Protected Area"
+AuthUserFile /customers/6/d/9/adamhencz.com/httpd.www/kea/01-web/redesign/.htpasswd
+Require valid-user

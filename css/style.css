@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css?family=Economica|Roboto');
+:root {
+  --main-bg-color: #171b1f;
+}
+
+.gridcontainer {
+    display: grid;
+/* I wanted to put the social media icons at the bottom this way */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+     grid-template-areas: 
+         "nav"
+      " main"
+      "socialbox"
+         "footer";
+}
+
+
+nav{
+    grid-area: nav;
+    background-color: var(--main-bg-color);
+   width: 100%;
+    padding-top: 10px;
+    border-bottom: 10px solid darkorange;
+    font-family: roboto, sans-serif;
+    font-size: 0.8em;
+}
+
+nav .current{
+    background-color: darkorange;
+    margin: 0 auto;
+    padding: 10px;
+    color:white; !important
+}
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: darkorange;
+    min-width: 120px;
+    z-index: 1;
+}
+.dropdown-content li {
+    list-style: none;
+    display: block;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: inline-block;
+}
+
+
+ul {
+        width:90%;
+        margin: 0 auto;
+        padding: 0;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+ul li a:hover{
+    color:darkorange;
+}
+
+ul li a{
+    color:white;
+    text-decoration: none;
+}
+
+h1{
+    font-family: economica, monospace;
+}
+
+h3 {
+    font-family:economica,monospace;
+    color: white;
+     font-size: 40px;
+}
+
+h2 {
+    font-family: roboto, sans-serif;
+    
+}
+
+.main{
+    grid-area: main;
+}        
+
+.card{
+    position: relative;
+    text-align: center;
+    border:0;
+    transition: opacity 1s;
+}
+
+.card:hover{
+    
+    opacity:  0.9;
+}
+
+#web{
+    background:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(../assets/web.jpeg);
+    background-position:center;
+    background-size: cover;
+    height:200px;
+    width:100%;
+}
+
+#content{
+    background:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(../assets/content.PNG);
+    background-position:center top;
+    background-size: cover;
+    height:200px;
+    width:100%;
+    
+}
+
+#animation{
+    background:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(../assets/animation.jpg);
+    background-position:center;
+    background-size: cover;
+    height:200px;
+    width:100%;
+}
+
+#ux{
+    background:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(../assets/ux.jpeg);
+    background-position:center;
+    background-size: cover;
+    height:200px;
+    width:100%;
+}
+
+
+.centered {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0px;
+}
+
+.socialbox{
+    grid-area: 'socialbox';
+    justify-content: center;
+    text-align: center;
+    margin: 20px 20px 20px 20px;
+    
+}
+
+.allicons{
+    justify-content: center;
+    display: inline;
+}
+
+.socialmedia{
+    text-align: center;
+    height: 40px;
+    width; 40px;
+    margin:10px;
+}
+
+
+
+/* About css styles apply here*/
+.about-me-section {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.me{
+    width:400px;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.breadtext {
+    font-family: roboto, sans-serif;
+    max-width:400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.describtion{
+    font-family: sans-serif;
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Here I have stuff for portfolio, although most is in place already*/
+.content {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.weboverview{
+    margin: 40px;
+}
+
+.links{
+    display: block;
+    justify-content: center;
+    padding:10px;
+    background-color: var(--main-bg-color);
+    margin:0;
+    margin-bottom: 50px;
+    width: 100%;
+    height:auto;
+    border-top: 8px solid;
+    border-bottom: 8px solid;
+    border-color: darkorange;
+    
+}
+ol{list-style: none;}
+ol a{ 
+    color: white;
+    font-size: 20px;
+    font-family: economica;
+    text-decoration:none;
+    padding: 5px;
+}
+
+ol a:hover{ 
+    color: darkorange;
+}
+
+.portfolioimage {
+    width:100%;
+}
+
+
+.icons{
+    width:100px;
+    margin: 10px;
+}
+li {
+    font-family: roboto;
+    list-style: none;
+}
+
+.matchcollab{
+    display: block;
+    width: 60%;
+    text-align: center;
+    margin: 50px;
+}
+/* overall footer element*/
+footer{
+    position:relative;
+    bottom: 0;
+    grid-area: footer;
+    background-color: var(--main-bg-color);
+    font-size: 13px;
+    text-align:center;
+    font-family: roboto;
+    color: white;
+    width:100%;
+    height: 80px;
+    border-top: 10px solid darkorange;
+    padding-top: 20px;
+}
+
+/* Ongoing fight with my knowledge of CSS Grids, but its in the works*/
+@media only screen and (min-width: 900px) {
+    
+    .gridcontainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: auto;
+     grid-template-areas: 
+         "nav nav nav nav nav"
+      " card1 card2 card3 card4"
+      "socialbox"
+         "footer";
+}
+    
+
+
+/* I wanted to place the cards this time vertically after each other, instead of being horisontal*/
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
